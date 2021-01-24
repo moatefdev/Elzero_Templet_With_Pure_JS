@@ -1,0 +1,74 @@
+:root {
+  @include cssVar(main-color, #ff9800);
+}
+// Start Header
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../images/01.jpg");
+  background-size: cover;
+  position: relative;
+  .overlay {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .header-area {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+    .logo {
+      width: 300px;
+      padding: 15px;
+      font-weight: bold;
+    }
+    .links {
+      list-style: none;
+      width: 100%;
+      text-align: right;
+      padding-left: 0;
+      padding-right: 20px;
+      font-size: 15px;
+      li {
+        display: inline-block;
+        margin-left: 10px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: 0.3s;
+          &:hover,
+          &.active {
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+  .introduction-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    h1 {
+      font-size: 34px;
+      margin: 0 0 12px;
+      span {
+        color: var(--main-color);
+      }
+    }
+    p {
+      line-height: 1.6;
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+}
+// End Header

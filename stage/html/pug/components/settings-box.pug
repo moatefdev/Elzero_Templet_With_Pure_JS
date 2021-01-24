@@ -1,0 +1,21 @@
+.settings-box
+  .toggle-settings
+    i.fa.fa-gear
+  .settings-container
+    .option-box
+      h4 Colors
+      - var colors = ["#27ae60", "#2980b9", "#c0392b", "#d35400", "#8e44ad"]
+      ul.colors-list
+        each color in colors
+          li(data-color=color)
+    .option-box
+      h4 Random Backgrounds
+      .random-backgrounds
+        span.yes.active(data-bg="yes") Yes
+        span.no(data-bg="no") No
+    .option-box
+      h4 Show Bullets
+      .bullets-option
+        span.yes.active(data-display="block") Show
+        span.no(data-display="none") Hide
+    button.reset-options Reset Options

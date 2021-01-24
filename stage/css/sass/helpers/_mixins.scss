@@ -1,0 +1,16 @@
+@import "../options/colors";
+
+@mixin cssVar($cssVarName, $color) {
+  #{'--' + $cssVarName}: $color;
+}
+
+// Color themes mixin
+// @each $theme, $map in $themes {
+//   .#{$theme} {
+//     $color: map-get($map, color);
+//   }
+// }
+
+// @each $theme, $map in $themes {
+//   #{'--' + $cssVarName}: map-get($map, color);
+// }

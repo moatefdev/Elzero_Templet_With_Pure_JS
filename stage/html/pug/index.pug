@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Template with Javascript
+    include layout/styles.pug
+  body
+    //- Start Settings Box
+    include components/settings-box.pug
+    include components/navigation-bullets.pug
+    //- End Settings Box 
+    //- Start Landing Page
+    .landing-page
+      .overlay
+      .container
+        include layout/header.pug
+    //- End Landing Page
+
+    //- Start About Us
+    .container
+      .about-us
+        .info-box
+          h2 About Us
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dicta earum vero sed culpa odit repellat asperiores facere voluptatibus nobis, itaque atque necessitatibus laudantium beatae adipisci ut dolorem, molestiae animi!
+        .image-box
+          img(src="images/about-us.jpg" alt="")
+    //- End About Us
+
+    //- Start Our Skills
+    .skills
+      .container
+        h2 Our Skills
+        .skill-box
+          .skill-name HTML
+          .skill-progress: span(data-progress="95%")
+        .skill-box
+          .skill-name CSS
+          .skill-progress: span(data-progress="90%")
+        .skill-box
+          .skill-name JavaScript
+          .skill-progress: span(data-progress="75%")
+        .skill-box
+          .skill-name jQuery
+          .skill-progress: span(data-progress="75%")
+        .skill-box
+          .skill-name Bootstrap
+          .skill-progress: span(data-progress="95%")
+        .skill-box
+          .skill-name Pug
+          .skill-progress: span(data-progress="80%")
+        .skill-box
+          .skill-name Sass (SCSS)
+          .skill-progress: span(data-progress="80%")
+        .skill-box
+          .skill-name Gulp
+          .skill-progress: span(data-progress="75%")
+        .skill-box
+          .skill-name Git &amp; GitHub
+          .skill-progress: span(data-progress="50%")
+        .skill-box
+          .skill-name CMD
+          .skill-progress: span(data-progress="40%")
+        .skill-box
+          .skill-name PHP
+          .skill-progress: span(data-progress="10%")
+    //- End Our Skills
+
+    //- Start Our Gallery
+    .gallery
+      .container
+        h2 Our Gallery
+        .images-box
+          img(src="images/01.jpg" alt="Image One")
+          img(src="images/02.jpg" alt="Image Two")
+          img(src="images/03.jpg" alt="Image Three")
+          img(src="images/04.jpg" alt="Image Four")
+          img(src="images/05.jpg" alt="Image Five")
+          img(src="images/06.jpg" alt="")
+          img(src="images/07.jpg" alt="")
+          img(src="images/08.jpg" alt="")
+          img(src="images/09.jpg" alt="")
+          img(src="images/10.jpg" alt="")
+    //- End Our Gallery
+    //- Start Timeline
+    .timeline
+      .container
+        .timeline-content 
+          .year 2018
+          .left
+            .content
+              h3 Testing
+              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quibusdam velit consectetur hic totam mollitia tempore magni nam atque voluptates?
+          .right
+            .content
+              h3 Testing
+              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quibusdam velit consectetur hic totam mollitia tempore magni nam atque voluptates?
+        .timeline-content
+          .year 2016
+          .left
+            .content
+              h3 Testing
+              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quibusdam velit consectetur hic totam mollitia tempore magni nam atque voluptates?
+          .right
+            .content
+              h3 Testing
+              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quibusdam velit consectetur hic totam mollitia tempore magni nam atque voluptates?
+    //- End Timeline
+    //- Start Features
+    .features
+      h2 Our Features
+      .container
+        .feat-content
+          .feat-box
+            img(src='images/programming.svg' alt='')
+            h4 Development
+            p We are professional marketeers, we will do anything you imagine in no time.
+          .feat-box
+            img(src='images/advertising.svg' alt='')
+            h4 Marketing
+            p We are professional marketeers, we will do anything you imagine in no time.
+          .feat-box
+            img(src='images/hosting-icon.svg' alt='')
+            h4 Hosting
+            p We are professional marketeers, we will do anything you imagine in no time.
+          .feat-box
+            img(src='images/mobile-app.svg' alt='')
+            h4 Mobile Develope
+            p We are professional marketeers, we will do anything you imagine in no time.
+          .feat-box
+            img(src='images/graphic-design.svg' alt='')
+            h4 Cloud and Servers
+            p We are professional marketeers, we will do anything you imagine in no time.
+          .feat-box
+            img(src='images/web-design.svg' alt='')
+            h4 Seo
+            p We are professional marketeers, we will do anything you imagine in no time.
+    //- End Features
+    //- Start Testimonials
+    .testimonials
+      .container
+        h2 Testimonials
+        .test-content
+          .ts-box
+            p
+              | Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.
+            .person-info
+              img(src='https://placehold.it/80/DDD' alt='')
+              div
+                h4 Ahmed Mosaad
+                p CEO At Company
+          .ts-box
+            p
+              | Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.
+            .person-info
+              img(src='https://placehold.it/80/EEE' alt='')
+              div
+                h4 Ahmed Mosaad
+                p CEO At Company
+          .ts-box
+            p
+              | Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.
+            .person-info
+              img(src='https://placehold.it/80/AAA' alt='')
+              div
+                h4 Ahmed Mosaad
+                p CEO At Company
+    //- End Testimonials
+    //- Start Contact Us
+    .contact
+      .overlay
+      .container
+        h2 Contact Us
+        form(action='')
+          .left
+            input(type='text' placeholder='Your Name' name='username')
+            input(type='text' placeholder='Your Phone' name='phone')
+            input(type='email' placeholder='Your Email' name='email')
+            input(type='text' placeholder='Subject' name='subject')
+          .right
+            textarea(name='message' placeholder='Your Message')
+            input(type='submit' value='Send')
+    //- End Contact Us
+
+
+    script(src="js/master.js")
+    script(src="http://localhost:35729/livereload.js")

@@ -1,0 +1,98 @@
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #fff;
+  width: 200px;
+  z-index: 1000;
+  min-height: 100vh;
+  transition: 0.3s;
+  box-shadow: 2px 0 10px 0px #555;
+  .toggle-settings {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    .fa-gear {
+      padding: 8px 0;
+      width: 30px;
+    }
+  }
+  .settings-container {
+    .option-box {
+      padding: 10px;
+      text-align: center;
+      background-color: #eee;
+      margin: 10px;
+      h4 {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+      }
+      .colors-list {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 10px 0 0;
+        $colors: #27ae60, #2980b9, #c0392b, #d35400, #8e44ad;
+        @for $i from 1 through length($colors) {
+          li:nth-child(#{$i}) {
+            background-color: nth($colors, $i);
+          }
+        }
+        li {
+          width: 24px;
+          height: 24px;
+          background-color: #333;
+          border-radius: 50%;
+          cursor: pointer;
+          opacity: 0.5;
+          display: inline-block;
+          border: 3px solid #eee;
+          &.active {
+            opacity: 1;
+            border-color: #fff;
+          }
+        }
+      }
+      .yes,
+      .no {
+        width: 50px;
+        background-color: var(--main-color);
+        color: #fff;
+        margin: 10px 3px;
+        display: inline-block;
+        font: {
+          size: 12px;
+          weight: bold;
+        }
+        padding: 4px 10px;
+        border-radius: 4px;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      span {
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+    .reset-options {
+      background-color: #f44336;
+      border: none;
+      width: 178px;
+      margin: 10px auto;
+      display: block;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  &.open {
+    left: 0;
+  }
+}

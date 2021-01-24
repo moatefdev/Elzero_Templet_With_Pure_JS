@@ -1,0 +1,11 @@
+Put the below code in "npm-shrinkwrap.json" file to be abele
+to use gulp version 3.9.1
+==============================
+
+{
+  "dependencies": {
+    "graceful-fs": {
+        "version": "4.2.2"
+     }
+  }
+}
