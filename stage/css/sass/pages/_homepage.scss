@@ -300,8 +300,7 @@
 .testimonials {
   position: relative;
   // overflow: hidden;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: $sectionPadding;
   &::before {
     content: "";
     width: 50%;
@@ -377,8 +376,7 @@
   min-height: 600px;
   background-image: url("../images/contact.png");
   background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: $sectionPadding;
   position: relative;
   .overlay {
     position: absolute;
@@ -401,15 +399,14 @@
     text-align: center;
   }
   form {
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     max-width: 800px;
     margin: auto;
     .left {
-      float: left;
       width: 49%;
     }
     .right {
-      float: right;
       width: 49%;
     }
     input:not([type="submit"]),
@@ -457,3 +454,30 @@
   }
 }
 // End Contact Us
+
+// Start Grid System
+@media (min-width: 576px) {
+  //  Small Devices => Landscape Phones
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  // Medium Devices => Tablets
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  // Desktops
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  // Large Screens
+  .container {
+    max-width: 1140px;
+  }
+}
+// End Grid System
