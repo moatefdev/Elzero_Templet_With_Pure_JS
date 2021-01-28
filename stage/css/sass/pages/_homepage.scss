@@ -271,6 +271,31 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .timeline .timeline-content {
+    flex-direction: column;
+    // width: 100%;
+    // margin-bottom: 20px;
+    margin-bottom: 0;
+  }
+  .timeline .timeline-content .left {
+    margin: 60px 10px;
+  }
+  .timeline .timeline-content .right {
+    margin: 15px 10px;
+  }
+  .timeline .timeline-content .left:before,
+  .timeline .timeline-content .right:before {
+    display: none;
+  }
+  .timeline .timeline-content .left .content {
+    margin-bottom: -55px;
+  }
+  .timeline .timeline-content .left .content:before,
+  .timeline .timeline-content .right .content:before {
+    display: none;
+  }
+}
 // End Timeline
 
 // Start Features
@@ -315,6 +340,16 @@
         color: #706f6f;
       }
     }
+  }
+}
+@media (max-width: 991px) {
+  .features .feat-box {
+    width: calc(100% / 2) !important;
+  }
+}
+@media (max-width: 575px) {
+  .features .feat-box {
+    width: 100% !important;
   }
 }
 // End Features
