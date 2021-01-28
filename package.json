@@ -1,17 +1,21 @@
 {
-  "name": "template-with-js",
+  "name": "tempalte-with-pure-javascript-by-elzero-web-school",
   "version": "1.0.0",
-  "description": "Create Template With HTML, CSS3, JavaScript",
+  "description": "This is a website for Big Fried Resturant",
   "main": "index.js",
-  "dependencies": {
-    "array-differ": "^3.0.0",
-    "static-server": "^2.2.1"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Mohamed Atef",
+  "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^4.0.2",
+    "gulp-connect": "^5.7.0",
     "gulp-notify": "^3.2.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0",
@@ -19,9 +23,18 @@
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.0.2"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "browserslist": [
+    "last 2 version",
+    "> 2%"
+  ],
+  "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moatefdev/Elzero_Templet_With_Pure_JS.git"
   },
-  "author": "Mohamed Atef",
-  "license": "ISC"
+  "bugs": {
+    "url": "https://github.com/moatefdev/Elzero_Templet_With_Pure_JS/issues"
+  },
+  "homepage": "https://github.com/moatefdev/Elzero_Templet_With_Pure_JS#readme"
 }

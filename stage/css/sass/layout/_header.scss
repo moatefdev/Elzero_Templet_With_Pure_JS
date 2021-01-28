@@ -16,24 +16,29 @@
     top: 0;
     z-index: 1;
   }
-  .header-area {
+  .container {
     position: relative;
-    z-index: 2;
-    color: #fff;
-    display: flex;
-    padding: 10px;
-    .logo {
-      width: 300px;
-      padding: 15px;
-      font-weight: bold;
-    }
+    z-index: 999;
+  }
+}
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  padding: 10px;
+  .logo {
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+  }
+  .links-container {
+    width: 100%;
+    text-align: right;
     .links {
       list-style: none;
-      width: 100%;
-      text-align: right;
+      // text-align: right;
       padding-left: 0;
-      padding-right: 20px;
-      font-size: 15px;
       li {
         display: inline-block;
         margin-left: 10px;
@@ -49,25 +54,91 @@
       }
     }
   }
-  .introduction-text {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    color: #fff;
-    text-align: center;
-    h1 {
-      font-size: 34px;
-      margin: 0 0 12px;
-      span {
-        color: var(--main-color);
+  .toggle-menu {
+    background: none;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: none;
+    position: relative;
+    &.menu-active {
+      &::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        bottom: -15px;
+        left: 10px;
       }
     }
-    p {
-      line-height: 1.6;
-      font-size: 20px;
-      margin: 0;
+    &:focus {
+      outline: none;
+    }
+    span {
+      display: block;
+      background-color: #fff;
+      height: 4px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.introduction-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 95%;
+  h1 {
+    font-size: 34px;
+    margin: 0 0 12px;
+    span {
+      color: var(--main-color);
+    }
+  }
+  p {
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0;
+  }
+  @media (max-width: 575px) {
+    .introduction-text h1 {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header-area {
+    .links {
+      display: none;
+      &.open {
+        background-color: #fff;
+        padding: 10px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        border-radius: 4px;
+        text-align: left !important;
+        li {
+          display: block !important;
+          margin: 10px;
+          a {
+            color: var(--main-color) !important;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .toggle-menu {
+      display: inline-block !important;
     }
   }
 }
