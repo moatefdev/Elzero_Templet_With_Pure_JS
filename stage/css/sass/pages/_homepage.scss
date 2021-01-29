@@ -427,6 +427,29 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .testimonials h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials .test-content {
+    flex-direction: column;
+  }
+  .testimonials .ts-box {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .testimonials .test-content .ts-box .person-info {
+    display: block;
+    text-align: center;
+  }
+  .testimonials .test-content .ts-box .person-info img {
+    margin-right: 0;
+  }
+}
 // End Testimonials
 
 // Start Contact Us
@@ -509,6 +532,15 @@
       opacity: 0;
       transition: 0.3s;
     }
+  }
+}
+@media (max-width: 767px) {
+  .contact form {
+    flex-direction: column;
+  }
+  .contact form .left,
+  .contact form .right {
+    width: 100%;
   }
 }
 // End Contact Us
