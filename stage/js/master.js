@@ -54,6 +54,14 @@ document.querySelector(".toggle-settings i").onclick = function () {
 
   // Toggle class open on main settings box
   document.querySelector(".settings-box").classList.toggle("open");
+  const eleBoxShadow = document.querySelector(".settings-box").style.boxShadow;
+  if (eleBoxShadow == "") {
+    document.querySelector(".settings-box").style.boxShadow =
+      "2px 0 10px 0px #555";
+  } else {
+    document.querySelector(".settings-box").style.boxShadow = "";
+  }
+  console.log(eleBoxShadow);
 };
 
 // Switch colors
@@ -130,15 +138,16 @@ window.onscroll = function () {
   let skillsOffsetTop = ourSkills.offsetTop;
 
   // Skills Outer Height
-  let skillsOuterHeight = ourSkills.offsetHeight;
+  // let skillsOuterHeight = ourSkills.offsetHeight;
 
   // Window Height
-  let windowHeight = this.innerHeight;
+  // let windowHeight = this.innerHeight;
 
   // Window ScrollTop
   let windowScrollTop = this.pageYOffset;
 
-  if (windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight) {
+  // windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight
+  if (windowScrollTop > skillsOffsetTop) {
     let allSkills = document.querySelectorAll(
       ".skill-box .skill-progress span"
     );

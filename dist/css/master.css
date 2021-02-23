@@ -35,16 +35,16 @@ body {
   z-index: 1000;
   min-height: 100vh;
   -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-box-shadow: 2px 0 10px 0px #555;
-          box-shadow: 2px 0 10px 0px #555; }
+  transition: 0.3s; }
   .settings-box .toggle-settings {
     position: absolute;
     right: -30px;
     top: 100px;
     background-color: #fff;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    border: 1px solid #aaa;
+    border-left-color: transparent; }
     .settings-box .toggle-settings .fa-gear {
       padding: 8px 0;
       width: 30px; }
